@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<robot name="C170">
+	<link name="camera_link">
+    <visual name="visual">
+      <geometry>
+        <box size="0.01 0.05 0.02"/>
+      </geometry>
+		<material name="black" />
+    </visual>
+    <collision name="collision">
+      <geometry>
+        <box size="0.01 0.05 0.02"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1"/>
+      <inertia
+        ixx="1.0" ixy="0.0" ixz="0.0"
+        iyy="1.0" iyz="0.0"
+        izz="1.0"/>
+    </inertial>
+
+	</link>
+	<gazebo>
+		<static>true</static>
+	</gazebo>
+	<gazebo reference="camera_link">
+		<material>Gazebo/Black</material>
+    <sensor type="camera" name="camera">
+      <!--      <pose>0.089 -0.01 0.236 0 0.436 0</pose> -->
+      <update_rate>6.0</update_rate>
+      <camera name="head">
+        <horizontal_fov>1.0123</horizontal_fov>
+        <image>
+          <width>640</width>
+          <height>480</height>
+          <format>B8G8R8</format>
+        </image>
+        <clip>
+          <near>0.02</near>
+          <far>300</far>
+        </clip>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.007</stddev>
+        </noise>
+        </camera>
+      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>0.0</updateRate>
+        <cameraName>camera</cameraName>
+        <imageTopicName>image</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>camera_link</frameName>
+        <hackBaseline>0.1</hackBaseline>
+        <distortionK1>.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+      </plugin>
+    </sensor>
+	</gazebo>
+</robot>
