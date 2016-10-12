@@ -1,0 +1,22 @@
+<?xml version='1.0'?>
+<sdf version="1.4">
+<model name="rock_blue">
+  <pose>0 0 0 0 0 0</pose>
+  <static>true</static>
+    <link name="link">
+      <collision name="collision">
+          <geometry>
+            <mesh><uri>model://rock_blue/materials/textures/blue_rock.dae</uri></mesh>
+          </geometry>
+        </geometry>
+      </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh><uri>model://rock_blue/materials/textures/blue_rock.dae</uri></mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    </link>
+  </model>
+</sdf>
