@@ -142,9 +142,21 @@
 			</include>
 		</model>
 		<model name="rock_2">
-			<pose>1 1 0 0 0 0</pose>
+			<pose>2 2 0 0 0 0</pose>
 			<include>
 				<uri>model://rock_2</uri>
+			</include>
+		</model>
+		<model name="rock_3">
+			<pose>2 1 0 0 0 0</pose>
+			<include>
+				<uri>model://rock_3</uri>
+			</include>
+		</model>
+		<model name="rock_4">
+			<pose>3 1 0 0 0 0</pose>
+			<include>
+				<uri>model://rock_4</uri>
 			</include>
 		</model>
 </world>
