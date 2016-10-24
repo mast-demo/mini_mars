@@ -6,16 +6,14 @@
     <link name="link">
       <collision name="collision">
           <geometry>
-            <mesh><uri>model://rock_blue/meshes/blue_rock.dae</uri></mesh>
+            <mesh><uri>model://rock_blue/meshes/rock_blue.dae</uri></mesh>
           </geometry>
       </collision>
         <visual name="visual">
           <geometry>
-            <mesh><uri>model://rock_blue/meshes/blue_rock.dae</uri></mesh>
+            <mesh><uri>model://rock_blue/meshes/rock_blue.dae</uri></mesh>
           </geometry>
         </visual>
       </link>
-    </model>
-    </link>
   </model>
 </sdf>

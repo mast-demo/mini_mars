@@ -15,7 +15,5 @@
           </geometry>
         </visual>
       </link>
-    </model>
-    </link>
   </model>
 </sdf>

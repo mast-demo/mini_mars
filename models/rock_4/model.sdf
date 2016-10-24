@@ -14,8 +14,6 @@
             <mesh><uri>model://rock_4/meshes/rock_4.dae</uri></mesh>
           </geometry>
         </visual>
-      </link>
-    </model>
     </link>
   </model>
 </sdf>
