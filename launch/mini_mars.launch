@@ -31,7 +31,15 @@
 		<group ns="camera_overhead">
 		<node name="spawn_c5" pkg="gazebo_ros" type="spawn_model" args="-file $(find mini_mars)/urdf/c170.urdf -urdf -model camera_overhead -x  2.3 -y 1.82 -z 2.4 -P 1.57"/>
 		</group>
+		<!--
   <include file="$(find swarmie_competition)/launch/swarmie.launch">
+    <arg name="name" value="eva"/>
+    <arg name="x" value="1"/>
+    <arg name="y" value="1"/>
+    <arg name="real" value="false"/>
+  </include>
+-->
+  <include file="$(find roadrunner_description)/launch/roadrunner.launch">
     <arg name="name" value="eva"/>
     <arg name="x" value="1"/>
     <arg name="y" value="1"/>
