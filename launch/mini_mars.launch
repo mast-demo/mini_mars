@@ -41,8 +41,8 @@
 -->
   <include file="$(find roadrunner_description)/launch/roadrunner.launch">
     <arg name="name" value="eva"/>
-    <arg name="x" value="1"/>
-    <arg name="y" value="1"/>
+    <arg name="x" value="2"/>
+    <arg name="y" value="2"/>
     <arg name="real" value="false"/>
   </include>
 
